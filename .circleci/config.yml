@@ -14,8 +14,11 @@ jobs:
     # See: https://circleci.com/docs/2.0/configuration-reference/#steps
     steps:
       - checkout
+      - test:
+          name: "Say hello 2"
+          command: "echo Hello, Rocco!"
       - run:
-          name: "Say hello"
+          name: "Say hello 1"
           command: "echo Hello, Rocco!"
 
 # Invoke jobs via workflows
